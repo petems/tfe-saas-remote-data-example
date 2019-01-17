@@ -8,6 +8,10 @@ data "terraform_remote_state" "single_micro" {
       name = "aws-single-micro"
     }
   }
+
+  defaults {
+    instance_id = "Backend not configured correctly"
+  }
 }
 
 output "single-micro-id" {
