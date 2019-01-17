@@ -14,6 +14,10 @@ data "terraform_remote_state" "single_micro" {
   }
 }
 
+resource "null_resource" "trigger" {
+
+}
+
 output "single-micro-id" {
   value = "${data.terraform_remote_state.single_micro.instance_id}"
 }
